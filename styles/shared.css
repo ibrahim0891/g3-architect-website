@@ -2,8 +2,17 @@
 
 :root{
     --work-sans : 'work sans'; 
+    --text-color: #727272; 
+    --primary-color: #ff900e; 
+    --secondary-color: #fff4e7; 
 }
 
 *{
     font-family: var(--work-sans);
+    box-sizing: border-box;
+    margin: 0 ; 
+
+    p{
+        line-height: 1.625rem;
+    }
 }

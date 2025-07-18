@@ -1,18 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root{
-    --work-sans : 'work sans'; 
-    --text-color: #727272; 
-    --primary-color: #ff900e; 
-    --secondary-color: #fff4e7; 
+:root {
+    --work-sans: "work sans";
+    --text-color: #727272;
+    --primary-color: #ff900e;
+    --secondary-color: #fff4e7;
+    --page-width: 1440px;
 }
 
-*{
+* {
     font-family: var(--work-sans);
     box-sizing: border-box;
-    margin: 0 ; 
+    margin: 0;
 
-    p{
+    p {
         line-height: 1.625rem;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.nav-bar,
+.banner,
+main,
+footer {
+    max-width: calc(var(--page-width) + 2rem);
+    margin: auto;
+    padding: 2rem;
+}
+
+.btn-primary {
+    width: auto !important;
+    align-self: auto;
+    padding: 1.5rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.section-description {
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 576px) {
+    .btn-primary {
+        padding: 1rem 1.25rem;
     }
 }

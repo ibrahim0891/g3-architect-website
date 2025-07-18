@@ -2,30 +2,28 @@
 
 /* Nav bar styles  */
 
-
-header{
+header {
     background-color: var(--secondary-color);
 }
 
-.nav-bar{
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
 
-    .brand{
+    .brand {
         font-weight: bold;
         font-size: 2.8rem;
     }
 
-    .nav-links{
+    .nav-links {
         display: flex;
         list-style-type: none;
-        gap: 3rem; 
+        gap: 3rem;
 
-        .nav-items{
-
-            .nav-link{
+        .nav-items {
+            .nav-link {
                 text-decoration: none;
                 font-size: 18px;
                 font-weight: 500;
@@ -35,65 +33,88 @@ header{
     }
 }
 
-.nav-bar , .banner{
-    max-width: 1440px ;
-    margin: auto;
-}
-
-
-.banner{
+.banner {
     margin-top: 6.4rem;
 
-    .banner-content{
+    .banner-content {
         max-width: 800px;
         margin: auto;
-        text-align: center; 
+        text-align: center;
 
-        .banner-title{
+        .banner-title {
             font-size: 4rem;
             font-weight: 700;
         }
 
-        .banner-description{ 
+        .banner-description {
             color: var(--text-color);
             margin: 2rem 0;
         }
-
-        .btn-primary{
-            width: auto !important;
-            align-self: auto;
-            padding: 1.5rem 1.25rem;
-            font-size: 1.25rem; 
-            font-weight: 600;
-            background-color: var(--primary-color);
-            color: white; 
-            border: none;
-            border-radius: 0.5rem;
-        }
     }
-    img{
-        margin: 3.125rem 0 ;
+    img {
+        margin: 3.125rem 0;
         width: 100%;
     }
 }
 
-
 /* Responsive Styles */
 
 @media screen and (max-width: 576px) {
-    .nav-bar{
+    .brand{
+        text-align: center;
+    }
+    .nav-bar {
         flex-direction: column;
-
-
-        .nav-links{
+        padding-bottom: 0.5rem;
+        
+        .nav-links {
             flex-direction: column;
             gap: 1rem;
             align-items: center;
-            margin-top: 1rem;
+            margin: 1rem 0;
+            padding: 0;
         }
+
     }
     
-    .banner{
+    .banner {
         margin-top: 0rem;
+    }
+    .banner-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        
+        .nav-links {
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0; 
+        }
+        padding-bottom: 0.5rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    h3.brand{
+        font-size: 54px !important;
+    }
+     .nav-bar { 
+        flex-direction: column; 
+        
+        .nav-links {
+            flex-direction: row;
+            gap: 3rem;
+            align-items: center; 
+            margin: 1rem 0;
+            padding: 0;  
+        }
+        padding-bottom: 0.5rem !important;
     }
 }

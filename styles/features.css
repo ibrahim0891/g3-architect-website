@@ -1,0 +1,135 @@
+@import url("./shared.css");
+
+.features-section {
+    margin-top: 8.125rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem;
+
+    .features {
+        h2 {
+            border-left: 0.5rem solid var(--primary-color);
+            padding-left: 1.5rem;
+            font-size: 45px;
+            font-weight: bold;
+            color: #424242;
+        }
+        .features-section-description {
+            color: var(--text-color);
+            margin: 1.5rem 0;
+        }
+
+        .features-card-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+
+            .card {
+                border-radius: 0.5rem;
+                padding: 1.875rem;
+                box-shadow: 0px 4px 30px rgba(102, 102, 102, 0.1);
+
+                p {
+                    color: var(--text-color);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .arch-image {
+        img {
+        }
+
+        div {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 42px 42px;
+            border-radius: 0.5rem;
+            margin-left: -90px;
+            margin-top: -100px;
+
+            span.big-text {
+                font-size: 2rem;
+                font-weight: 800;
+                display: block;
+            }
+
+            span.small-text {
+                font-size: 1.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .features-section {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .features {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features-section{
+        display: grid ;
+        grid-template-columns: repeat(1, 1fr);
+        .arch-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                display: inline-block;
+                width: fit-content;
+                margin: 0;
+                margin-top: -70px;
+                padding: 1.5rem;
+                margin-bottom: -60px;
+            }
+        }
+ 
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+     .features-section{
+        display: grid ;
+        grid-template-columns: repeat(1, 1fr);
+
+        .features{
+            .features-card-container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        .arch-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                display: inline-block;
+                width: fit-content;
+                margin: 0;
+                margin-top: -70px;
+                padding: 1.5rem;
+                margin-bottom: -60px;
+            }
+        }
+ 
+    }
+}

@@ -1,0 +1,66 @@
+@import url("./shared.css");
+
+.some-facts {
+    margin-top: 5rem;
+
+    h2 {
+        font-size: 2.75rem;
+    }
+
+    .fact-description {
+        max-width: 542px;
+        margin: 1.5rem 0;
+    }
+
+    .facts-card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 3rem;
+        gap: 6rem;
+
+        .fact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 8px;
+            gap: 0.75rem;
+            padding: 3rem;
+
+            box-shadow: 0px 0px 1px 1px #ff900e;
+
+            img {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .some-facts {
+        .facts-card-container {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+            padding: 0rem;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .some-facts {
+        .facts-card-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 0rem;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .some-facts {
+        .facts-card-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 0rem;
+        }
+    }
+}
